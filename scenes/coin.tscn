@@ -218,4 +218,16 @@ libraries = {
 "": SubResource("AnimationLibrary_rsk3f")
 }
 
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 24
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+emission_shape = 1
+emission_sphere_radius = 8.0
+spread = 180.0
+gravity = Vector2(0, 490)
+color = Color(1, 0.94902, 0.105882, 1)
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
