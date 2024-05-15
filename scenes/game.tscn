@@ -1,11 +1,9 @@
-[gd_scene load_steps=20 format=3 uid="uid://bi76vetingmhd"]
+[gd_scene load_steps=18 format=3 uid="uid://bi76vetingmhd"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_0uppb"]
 [ext_resource type="PackedScene" uid="uid://bh1m1n7pm3ll3" path="res://scenes/player.tscn" id="1_01mll"]
 [ext_resource type="Texture2D" uid="uid://dukaa145phxjq" path="res://assets/sprites/world_tileset.png" id="2_0g4vb"]
-[ext_resource type="Script" path="res://scripts/game_manager.gd" id="2_iiks8"]
 [ext_resource type="PackedScene" uid="uid://d02fda7j544x2" path="res://scenes/platform.tscn" id="3_1u2ul"]
-[ext_resource type="FontFile" uid="uid://bko2q5ibufg6c" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="3_u8cne"]
 [ext_resource type="PackedScene" uid="uid://c04sgpqd87opt" path="res://scenes/coin.tscn" id="4_7ekgx"]
 [ext_resource type="PackedScene" uid="uid://cqv4g0o7iawia" path="res://scenes/killzone.tscn" id="5_5dhqu"]
 [ext_resource type="PackedScene" uid="uid://t0o8buj240mk" path="res://scenes/slime.tscn" id="6_ucsx3"]
@@ -488,22 +486,6 @@ _data = {
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_0uppb")
-
-[node name="GameManager" type="Node" parent="."]
-unique_name_in_owner = true
-script = ExtResource("2_iiks8")
-
-[node name="ScoreLabel" type="Label" parent="GameManager"]
-offset_left = 195.0
-offset_top = -41.0
-offset_right = 367.0
-offset_bottom = -18.0
-theme_override_colors/font_color = Color(0.0980392, 0.313726, 0.752941, 1)
-theme_override_fonts/font = ExtResource("3_u8cne")
-theme_override_font_sizes/font_size = 8
-text = "X coins have been very collected"
-horizontal_alignment = 1
-autowrap_mode = 2
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_gfjd1")

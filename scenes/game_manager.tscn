@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://ksp7yuvv0x27"]
+
+[ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_yyupk"]
+[ext_resource type="FontFile" uid="uid://bko2q5ibufg6c" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_gfxa3"]
+
+[node name="GameManager" type="Node"]
+script = ExtResource("1_yyupk")
+
+[node name="ScoreLabel" type="Label" parent="."]
+z_index = 4
+offset_left = -80.0
+offset_top = -9.0
+offset_right = 92.0
+offset_bottom = 14.0
+theme_override_colors/font_color = Color(0.0980392, 0.313726, 0.752941, 1)
+theme_override_fonts/font = ExtResource("2_gfxa3")
+theme_override_font_sizes/font_size = 8
+text = "X coins have been very collected"
+horizontal_alignment = 1
+autowrap_mode = 2
