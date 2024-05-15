@@ -10,6 +10,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var jump_sound = $JumpSound
 
 func _physics_process(delta):
+	print(get_tree().current_scene)
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta

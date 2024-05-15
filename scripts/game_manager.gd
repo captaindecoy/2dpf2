@@ -6,9 +6,14 @@ var current_scene:Node
 @export var my_array:Array[PackedScene]
 
 func _ready():
+	get_tree().change_scene_to_packed(my_array[0])
+	#pass
 	#print(my_array[0].resource_path)
-	current_scene = my_array[0].instantiate()
-	add_child(current_scene)
+	
+	#current_scene = my_array[0].instantiate()
+	#add_child(current_scene)
+	#var loading = get_node("/LoadingScene")
+	#remove_child(get_tree().current_scene)
 	
 func add_point():
 	score += 1
