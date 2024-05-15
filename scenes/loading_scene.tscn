@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://b47hly1vmwjm2"]
+
+[node name="LoadingScene" type="Node2D"]
