@@ -2,11 +2,13 @@ extends Node
 
 var score:int = 0
 var current_scene:Node
+var level_index:int = -1
 @onready var score_label:Label = $ScoreLabel
 @export var my_array:Array[PackedScene]
 
 func _ready():
-	get_tree().change_scene_to_packed(my_array[0])
+	call_deferred("next_level")
+	#get_tree().change_scene_to_packed(my_array[level_index])
 	#pass
 	#print(my_array[0].resource_path)
 	
@@ -22,3 +24,10 @@ func add_point():
 func reload_level():
 	remove_child(current_scene)
 	add_child(current_scene)
+	
+func next_level():
+	level_index += 1
+	get_tree().change_scene_to_packed(my_array[level_index])
+	
+#func change_scene_deferred():
+#	get_tree().change_scene_to_packed(my_array[level_index])

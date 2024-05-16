@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bi76vetingmhd"]
+[gd_scene load_steps=19 format=3 uid="uid://bi76vetingmhd"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_2e1tl"]
 [ext_resource type="Texture2D" uid="uid://dukaa145phxjq" path="res://assets/sprites/world_tileset.png" id="2_4ud0p"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c04sgpqd87opt" path="res://scenes/coin.tscn" id="6_3m6dd"]
 [ext_resource type="PackedScene" uid="uid://t0o8buj240mk" path="res://scenes/slime.tscn" id="7_ei2hc"]
 [ext_resource type="FontFile" uid="uid://dl1l2hgye5jv7" path="res://assets/fonts/PixelOperator8.ttf" id="8_sfru1"]
+[ext_resource type="PackedScene" uid="uid://cxj1pufktgdot" path="res://scenes/exit.tscn" id="9_mf4u4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sg2o1"]
 texture = ExtResource("2_4ud0p")
@@ -579,3 +580,6 @@ theme_override_colors/font_color = Color(0.0980392, 0.313726, 0.752941, 1)
 theme_override_fonts/font = ExtResource("8_sfru1")
 theme_override_font_sizes/font_size = 8
 text = "Space to jump"
+
+[node name="Exit" parent="." instance=ExtResource("9_mf4u4")]
+position = Vector2(120, -144)
