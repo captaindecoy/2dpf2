@@ -7,7 +7,7 @@
 
 [node name="GameManager" type="Node"]
 script = ExtResource("1_yyupk")
-my_array = Array[PackedScene]([ExtResource("2_7gici"), ExtResource("2_payvy")])
+levels_array = Array[PackedScene]([ExtResource("2_7gici"), ExtResource("2_payvy")])
 
 [node name="ScoreLabel" type="Label" parent="."]
 z_index = 4
