@@ -7,9 +7,10 @@
 
 [node name="GameManager" type="Node"]
 script = ExtResource("1_yyupk")
-levels_array = Array[PackedScene]([ExtResource("2_7gici"), ExtResource("2_payvy")])
+levels_array = Array[PackedScene]([ExtResource("2_payvy"), ExtResource("2_7gici")])
 
 [node name="ScoreLabel" type="Label" parent="."]
+visible = false
 z_index = 4
 offset_left = -80.0
 offset_top = -9.0

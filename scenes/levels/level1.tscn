@@ -106,6 +106,9 @@ position = Vector2(1, 0)
 zoom = Vector2(3, 3)
 limit_bottom = 82
 position_smoothing_enabled = true
+drag_vertical_enabled = true
+drag_bottom_margin = 0.5
+editor_draw_drag_margin = true
 
 [node name="Killzone" parent="." instance=ExtResource("4_380tr")]
 position = Vector2(20, 83)
