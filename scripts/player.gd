@@ -38,7 +38,7 @@ func _physics_process(delta):
 	else:
 		animated_sprite.play("jump")
 	
-	if direction:
+	if direction and get_node_or_null("CollisionShape2D") != null: # trying to slow-down after-death movement
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)

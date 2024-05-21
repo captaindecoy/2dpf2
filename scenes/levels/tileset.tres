@@ -1,6 +1,7 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://r2bqa1c37dep"]
+[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://r2bqa1c37dep"]
 
 [ext_resource type="Texture2D" uid="uid://dukaa145phxjq" path="res://assets/sprites/world_tileset.png" id="1_3qc8b"]
+[ext_resource type="Texture2D" uid="uid://dfhsfsml5liyj" path="res://assets/sprites/tile_grid.png" id="2_gj4ds"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sg2o1"]
 texture = ExtResource("1_3qc8b")
@@ -415,6 +416,13 @@ texture = ExtResource("1_3qc8b")
 3:15/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 3:15/0/physics_layer_0/angular_velocity = 0.0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pea4d"]
+texture = ExtResource("2_gj4ds")
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
 [resource]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_sg2o1")
+sources/1 = SubResource("TileSetAtlasSource_pea4d")
