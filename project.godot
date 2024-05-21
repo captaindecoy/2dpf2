@@ -20,10 +20,6 @@ config/icon="res://icon.svg"
 GameManager="*res://scenes/game_manager.tscn"
 Music="*res://scenes/music.tscn"
 
-[debug]
-
-settings/stdout/print_fps=true
-
 [display]
 
 window/stretch/mode="viewport"
