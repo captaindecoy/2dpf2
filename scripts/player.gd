@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 const SPEED = 130.0
-const JUMP_VELOCITY = -350.0
+const JUMP_VELOCITY = -300.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -29,7 +29,7 @@ func _physics_process(delta):
 		velocity.y = JUMP_VELOCITY
 		jump_sound.play()
 	if velocity.y < 0 and !Input.is_action_pressed("jump"):
-		print(Input.is_action_pressed("jump"))
+		#print(Input.is_action_pressed("jump"))
 		velocity.y = max(velocity.y, 0)
 		#print(Input.is_action_pressed("jump"))
 
