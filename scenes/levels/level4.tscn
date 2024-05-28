@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://ev8y33og8g1"]
+[gd_scene load_steps=11 format=3 uid="uid://ev8y33og8g1"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_tlebn"]
 [ext_resource type="TileSet" uid="uid://r2bqa1c37dep" path="res://scenes/levels/tileset.tres" id="2_gisni"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c04sgpqd87opt" path="res://scenes/objects/coin.tscn" id="6_fw672"]
 [ext_resource type="FontFile" uid="uid://dl1l2hgye5jv7" path="res://assets/fonts/PixelOperator8.ttf" id="8_swk88"]
 [ext_resource type="PackedScene" uid="uid://cxj1pufktgdot" path="res://scenes/objects/exit.tscn" id="9_12t20"]
+[ext_resource type="PackedScene" uid="uid://bas2wdom1s1ht" path="res://scenes/objects/question_block.tscn" id="9_jfmc8"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ny8nb"]
 
@@ -68,3 +69,6 @@ text = "Space to jump"
 
 [node name="Exit" parent="." instance=ExtResource("9_12t20")]
 position = Vector2(264, 168)
+
+[node name="QuestionBlock" parent="." instance=ExtResource("9_jfmc8")]
+position = Vector2(-184, -40)

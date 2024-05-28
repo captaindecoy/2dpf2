@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bas2wdom1s1ht"]
+
+[ext_resource type="Texture2D" uid="uid://dukaa145phxjq" path="res://assets/sprites/world_tileset.png" id="1_hiqtb"]
+[ext_resource type="Script" path="res://scripts/question_block.gd" id="1_vnaaj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i07a6"]
+size = Vector2(16, 16)
+
+[node name="QuestionBlock" type="RigidBody2D"]
+gravity_scale = 0.0
+script = ExtResource("1_vnaaj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_hiqtb")
+region_enabled = true
+region_rect = Rect2(0, 32, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_i07a6")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(0, 9)
+collision_mask = 3
