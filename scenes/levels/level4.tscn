@@ -72,3 +72,12 @@ position = Vector2(264, 168)
 
 [node name="QuestionBlock" parent="." instance=ExtResource("9_jfmc8")]
 position = Vector2(-184, -40)
+
+[node name="QuestionBlock2" parent="." instance=ExtResource("9_jfmc8")]
+position = Vector2(-168, -40)
+
+[node name="QuestionBlock3" parent="." instance=ExtResource("9_jfmc8")]
+position = Vector2(-168, -56)
+
+[node name="QuestionBlock4" parent="." instance=ExtResource("9_jfmc8")]
+position = Vector2(-184, -56)
