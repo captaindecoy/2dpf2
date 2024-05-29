@@ -13,5 +13,8 @@ func _process(_delta):
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 		else:
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+	
+	if Input.is_action_just_pressed("restart"):
+		get_tree().reload_current_scene()
 			
 			

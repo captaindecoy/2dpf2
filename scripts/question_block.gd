@@ -1,5 +1,6 @@
 extends RigidBody2D
-@onready var ray_cast_2d = $RayCast2D
+@onready var left_ray_cast_2d = $LeftRayCast2D
+@onready var right_ray_cast_2d = $RightRayCast2D
 
 
 # Called when the node enters the scene tree for the first time.
@@ -9,7 +10,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if ray_cast_2d.is_colliding():
+	if left_ray_cast_2d.is_colliding() or right_ray_cast_2d.is_colliding():
 		print("Ray collided!")
 		queue_free()
 	pass
