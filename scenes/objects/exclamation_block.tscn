@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://nr5264jwqlid"]
+
+[ext_resource type="Texture2D" uid="uid://dukaa145phxjq" path="res://assets/sprites/world_tileset.png" id="1_pkb3f"]
+[ext_resource type="Script" path="res://scripts/state_machine.gd" id="2_mflnh"]
+[ext_resource type="Script" path="res://scenes/levels/idle.gd" id="3_nsghd"]
+[ext_resource type="Script" path="res://scenes/levels/other.gd" id="4_v5b3a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lfa22"]
+size = Vector2(16, 16)
+
+[node name="ExclamationBlock" type="RigidBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_pkb3f")
+region_enabled = true
+region_rect = Rect2(32, 48, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_lfa22")
+
+[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
+script = ExtResource("2_mflnh")
+initial_state = NodePath("Idle")
+
+[node name="Idle" type="Node" parent="StateMachine"]
+script = ExtResource("3_nsghd")
+
+[node name="Other" type="Node" parent="StateMachine"]
+script = ExtResource("4_v5b3a")
