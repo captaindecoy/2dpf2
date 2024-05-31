@@ -1,7 +1,7 @@
 [gd_scene load_steps=17 format=3 uid="uid://bi76vetingmhd"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_51a3x"]
-[ext_resource type="TileSet" uid="uid://r2bqa1c37dep" path="res://scenes/levels/tileset.tres" id="2_q6fi5"]
+[ext_resource type="TileSet" uid="uid://r2bqa1c37dep" path="res://tileset.tres" id="2_q6fi5"]
 [ext_resource type="PackedScene" uid="uid://bh1m1n7pm3ll3" path="res://scenes/characters/player.tscn" id="3_bw33t"]
 [ext_resource type="PackedScene" uid="uid://cqv4g0o7iawia" path="res://scenes/killzone.tscn" id="4_380tr"]
 [ext_resource type="PackedScene" uid="uid://d02fda7j544x2" path="res://scenes/objects/platform.tscn" id="5_lrx12"]
