@@ -9,6 +9,8 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var coyote_frames : int = 6
 var coyote : bool = false
 var last_floor : bool = false
+var direction : float
+var facing_direction : int = 1
 
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var jump_sound = $JumpSound
@@ -32,10 +34,15 @@ func _physics_process(delta):
 		#print(Input.is_action_pressed("jump"))
 		velocity.y = max(velocity.y, 0)
 		#print(Input.is_action_pressed("jump"))
-
+	print(str(direction))
+	#if Input.is_action_just_pressed("dash"):
+		#velocity.x += 1000 * sign(facing_direction)
+	
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction = Input.get_axis("move_left", "move_right")
+	direction = Input.get_axis("move_left", "move_right")
+	if direction != 0:
+		facing_direction = sign(direction)
 	
 	if direction > 0:
 		animated_sprite.flip_h = false
@@ -55,10 +62,13 @@ func _physics_process(delta):
 		coyote = true
 		coyote_timer.start()
 	
-	if direction and get_node_or_null("CollisionShape2D") != null: # trying to slow-down after-death movement
+	if direction and velocity.x < 150 and get_node_or_null("CollisionShape2D") != null: # third check is trying to slow-down after-death movement
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+		
+	if Input.is_action_just_pressed("dash"):
+		velocity.x = 1000 * sign(facing_direction)
 	
 	last_floor = is_on_floor() #sequencing thing here?
 	
