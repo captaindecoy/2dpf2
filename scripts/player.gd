@@ -68,7 +68,7 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		
 	if Input.is_action_just_pressed("dash"):
-		velocity.x = 1000 * sign(facing_direction)
+		velocity.x = 950 * sign(facing_direction)
 	
 	last_floor = is_on_floor() #sequencing thing here?
 	
