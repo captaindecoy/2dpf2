@@ -34,7 +34,7 @@ func _physics_process(delta):
 		#print(Input.is_action_pressed("jump"))
 		velocity.y = max(velocity.y, 0)
 		#print(Input.is_action_pressed("jump"))
-	print(str(direction))
+	#print(str(direction))
 	#if Input.is_action_just_pressed("dash"):
 		#velocity.x += 1000 * sign(facing_direction)
 	
