@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://ev8y33og8g1"]
+[gd_scene load_steps=12 format=3 uid="uid://ev8y33og8g1"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_tlebn"]
 [ext_resource type="TileSet" uid="uid://r2bqa1c37dep" path="res://tileset.tres" id="2_gisni"]
@@ -9,6 +9,7 @@
 [ext_resource type="FontFile" uid="uid://dl1l2hgye5jv7" path="res://assets/fonts/PixelOperator8.ttf" id="8_swk88"]
 [ext_resource type="PackedScene" uid="uid://cxj1pufktgdot" path="res://scenes/objects/exit.tscn" id="9_12t20"]
 [ext_resource type="PackedScene" uid="uid://bas2wdom1s1ht" path="res://scenes/objects/question_block.tscn" id="9_jfmc8"]
+[ext_resource type="Script" path="res://scripts/camera2D.gd" id="10_n7cv1"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ny8nb"]
 
@@ -27,17 +28,6 @@ layer_2/tile_data = PackedInt32Array(-65544, 1, 0, -65543, 1, 0, -7, 1, 0, -8, 1
 
 [node name="Player" parent="." instance=ExtResource("3_e17pc")]
 position = Vector2(-240, 16)
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(1, 0)
-offset = Vector2(0, -37)
-zoom = Vector2(3, 3)
-limit_left = -288
-limit_bottom = 82
-position_smoothing_enabled = true
-drag_vertical_enabled = true
-drag_top_margin = 0.6
-editor_draw_drag_margin = true
 
 [node name="Killzone" parent="." instance=ExtResource("4_flibj")]
 position = Vector2(20, 83)
@@ -95,3 +85,17 @@ text = "Space to jump"
 
 [node name="Exit" parent="." instance=ExtResource("9_12t20")]
 position = Vector2(264, 168)
+
+[node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("objectToFollow")]
+position = Vector2(-239, 16)
+offset = Vector2(0, -37)
+limit_left = -288
+limit_bottom = 82
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+drag_left_margin = 0.05
+drag_top_margin = 0.6
+drag_right_margin = 0.05
+editor_draw_drag_margin = true
+script = ExtResource("10_n7cv1")
+objectToFollow = NodePath("../Player")
