@@ -45,6 +45,9 @@ position = Vector2(-256, 216)
 [node name="QuestionBlock" parent="QuestionBlocks" instance=ExtResource("9_jfmc8")]
 position = Vector2(-184, -40)
 
+[node name="QuestionBlock8" parent="QuestionBlocks" instance=ExtResource("9_jfmc8")]
+position = Vector2(-136, -8)
+
 [node name="QuestionBlock2" parent="QuestionBlocks" instance=ExtResource("9_jfmc8")]
 position = Vector2(-168, -40)
 

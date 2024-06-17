@@ -15,6 +15,8 @@ var facing_direction : int = 1
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var jump_sound = $JumpSound
 @onready var coyote_timer = $CoyoteTimer
+@onready var ray_cast_2d = $RayCast2D
+
 
 func _ready():
 	coyote_timer.wait_time = coyote_frames / 60.0
@@ -71,6 +73,12 @@ func _physics_process(delta):
 		velocity.x = 950 * sign(facing_direction)
 	
 	last_floor = is_on_floor() #sequencing thing here?
+	
+	if ray_cast_2d.is_colliding() and velocity.y > 0:
+		var obj = ray_cast_2d.get_collider()
+		if is_instance_valid(obj):
+			obj.queue_free()
+			
 	
 	move_and_slide()
 

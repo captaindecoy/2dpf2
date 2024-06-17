@@ -175,6 +175,7 @@ radius = 5.0
 [node name="Player" type="CharacterBody2D"]
 z_index = 5
 collision_layer = 2
+collision_mask = 5
 script = ExtResource("1_jf44y")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -192,5 +193,9 @@ stream = ExtResource("3_lr7bo")
 
 [node name="CoyoteTimer" type="Timer" parent="."]
 one_shot = true
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(0, -16)
+collision_mask = 4
 
 [connection signal="timeout" from="CoyoteTimer" to="." method="_on_coyote_timer_timeout"]
